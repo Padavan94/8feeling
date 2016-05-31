@@ -1,0 +1,97 @@
+
+a,i,{
+	transition: all .2s ease;
+	&:link,&:visited,&:hover,&:active,&:focus{
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+
+@keyframes hvr-icon-float-away {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-1em);
+    transform: translateY(-1em);
+  }
+}
+
+.title{
+	padding: 108px 0px 73px 0px;
+	text-align: center;
+	&--black{
+		h2{
+			&:after,
+			&:before{
+				background-image: url("/img/ravno.png");
+			}
+		}
+	}
+	
+	h2{
+		text-transform: uppercase;
+		font-size: 34px;
+		margin: 0;
+		display: inline-block;
+		position: relative;
+		z-index: -1;
+		font-family: "AcromBold";
+		&:after,
+		&:before{
+			content: "";
+			width: 19px;
+			height: 14px;
+			background-position: center;
+			position: absolute;
+			top: 50%;
+			margin-top: -7px;
+		}
+		&:before{
+			left: -24px;
+		}
+		&:after{
+			right: -26px;
+		}
+	}
+}
+
+/* overlay at start */
+.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* overlay animate in */
+.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  position: relative;
+  top: -20px;
+  
+}
+/* content animate it */
+.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+  top: 0px;
+}
+/* content animate out */
+.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
