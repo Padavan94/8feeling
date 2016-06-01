@@ -1,4 +1,8 @@
 <?php
+
+
+
+
 class ControllerProductCategory extends Controller {
 	public function index() {
 		$this->load->language('product/category');
@@ -19,6 +23,18 @@ class ControllerProductCategory extends Controller {
 			$sort = $this->request->get['sort'];
 		} else {
 			$sort = 'p.sort_order';
+		}
+        
+        if (isset($this->request->get['price_start'])) {
+			$price_start = $this->request->get['price_start'];
+		} else {
+			$price_start = 0;
+		}
+
+        if (isset($this->request->get['price_end'])) {
+			$price_end = $this->request->get['price_end'];
+		} else {
+			$price_end = 9999999999;
 		}
 
 		if (isset($this->request->get['order'])) {
@@ -153,6 +169,7 @@ class ControllerProductCategory extends Controller {
 			$results = $this->model_catalog_category->getCategories($category_id);
 
 			foreach ($results as $result) {
+				var_dump($results);
 				$filter_data = array(
 					'filter_category_id'  => $result['category_id'],
 					'filter_sub_category' => true
@@ -172,9 +189,13 @@ class ControllerProductCategory extends Controller {
 				'sort'               => $sort,
 				'order'              => $order,
 				'start'              => ($page - 1) * $limit,
-				'limit'              => $limit
+				'limit'              => $limit,
+                'price_start' => $price_start,
+                'price_end' => $price_end
 			);
 
+//            var_dump($filter_data);
+            
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 			$results = $this->model_catalog_product->getProducts($filter_data);

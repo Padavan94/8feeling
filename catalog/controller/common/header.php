@@ -94,13 +94,7 @@ class ControllerCommonHeader extends Controller {
 
 		$categories = $this->model_catalog_category->getCategories(0);
 
-function prv($var) {
-    static $int=0;
-    echo '<pre><b style="background: blue;padding: 1px 5px;">'.$int.'</b> ';
-    var_dump($var);
-    echo '</pre>';
-    $int++;
-}
+
 
 		foreach ($categories as $category) {
 			if ($category['top']) {
