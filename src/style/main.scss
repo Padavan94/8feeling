@@ -506,7 +506,7 @@ body{
 	min-height: 268px;
 	background-color: #2e2e2e;
 	justify-content: center;
-	height: 100%;
+	
 	color: #fff;
 	text-align: center;
 	display: flex;
@@ -779,6 +779,7 @@ body{
 	&__box{
 		display: flex;
 		height: 800px;
+		flex-wrap: wrap;
 		position: relative;
 		&--inverse{
 			flex-direction: row-reverse;
@@ -814,7 +815,11 @@ body{
 		}
 	}
 	&__item{
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 		position: relative;
+		width: 33.333%;
 		&:hover{
 			.collections__info{
 				opacity: 1;

@@ -107,6 +107,7 @@ class ControllerCommonMenu extends Controller {
 		$data['text_openbay_links'] = $this->language->get('text_openbay_links');
 		$data['text_openbay_report_price'] = $this->language->get('text_openbay_report_price');
 		$data['text_openbay_order_import'] = $this->language->get('text_openbay_order_import');
+		$data['text_blog'] = "Коллекции";
 
 		$data['analytics'] = $this->url->link('extension/analytics', 'token=' . $this->session->data['token'], true);
 		$data['home'] = $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], true);
@@ -185,6 +186,10 @@ class ControllerCommonMenu extends Controller {
 		$data['recurring'] = $this->url->link('catalog/recurring', 'token=' . $this->session->data['token'], true);
 		$data['order_recurring'] = $this->url->link('sale/recurring', 'token=' . $this->session->data['token'], true);
 
+		
+		$data['blog'] = $this->url->link('extension/blog', 'token=' . $this->session->data['token'], 'SSL');
+
+
 		$data['openbay_show_menu'] = $this->config->get('openbaypro_menu');
 		$data['openbay_link_extension'] = $this->url->link('extension/openbay', 'token=' . $this->session->data['token'], true);
 		$data['openbay_link_orders'] = $this->url->link('extension/openbay/orderlist', 'token=' . $this->session->data['token'], true);
@@ -208,6 +213,7 @@ class ControllerCommonMenu extends Controller {
 			'amazonus' => $this->config->get('openbay_amazonus_status'),
 			'etsy' => $this->config->get('etsy_status'),
 		);
+		
 
 		return $this->load->view('common/menu', $data);
 	}

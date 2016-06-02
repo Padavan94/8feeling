@@ -1,7 +1,6 @@
 /*
  Third party
  */
-//= ../../bower_components/jquery/dist/jquery.min.js
 //= ../../bower_components/Swiper/dist/js/swiper.js
 //= ../../bower_components/imagesloaded/imagesloaded.pkgd.js
 

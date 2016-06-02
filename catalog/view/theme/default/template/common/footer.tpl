@@ -40,7 +40,7 @@
           наш Инстаграм:
         </div>
         <div class="footer__instagram__img">
-          <img src="/img/inst.png" alt="instagram">
+          <img src="" alt="instagram">
         </div>
       </div>
       <div class="footer__contacts">
