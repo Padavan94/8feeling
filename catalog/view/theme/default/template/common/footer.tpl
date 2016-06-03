@@ -1,4 +1,39 @@
-﻿
+﻿<section class="instagram-section">
+  <div class="title title--black instagram-section__title">
+    <h2>INSTAGRAM</h2>
+  </div>
+  <div class="instagram-section__slider swiper-container">
+    <div class="swiper-wrapper">
+      <div class="instagram-section__slider__item swiper-slide"><a href="#"><img src="/image/photo1.jpg" alt="photo1"></a></div>
+      <div class="instagram-section__slider__item swiper-slide"><a href="#"><img src="/image/photo2.jpg" alt="photo1"></a></div>
+      <div class="instagram-section__slider__item swiper-slide"><a href="#"><img src="/image/photo3.jpg" alt="photo1"></a></div>
+      <div class="instagram-section__slider__item swiper-slide"><a href="#"><img src="/image/photo4.jpg" alt="photo1"></a></div>
+      <div class="instagram-section__slider__item swiper-slide"><a href="#"><img src="/image/photo5.jpg" alt="photo1"></a></div>
+      <div class="instagram-section__slider__item swiper-slide"><a href="#"><img src="/image/photo6.jpg" alt="photo1"></a></div>
+      <div class="instagram-section__slider__item swiper-slide"><a href="#"><img src="/image/photo7.jpg" alt="photo1"></a></div>
+      <div class="instagram-section__slider__item swiper-slide"><a href="#"><img src="/image/photo8.jpg" alt="photo1"></a></div>
+    </div>
+  </div>
+</section>
+<section class="pre-footer">
+  <div class="container">
+    <div class="pre-footer__container">
+      <div class="pre-footer__header">
+        <h2>sentendo l'8 °</h2>
+      </div>
+      <div class="pre-footer__body">
+        <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque
+        laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto
+        beatae vitae dicta sunt, explicabo.</p>
+
+        <p>Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur
+        aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesc
+        unt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci
+        velit, sed quia non numquam eius modi tempora incidunt.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
@@ -40,7 +75,7 @@
           наш Инстаграм:
         </div>
         <div class="footer__instagram__img">
-          <img src="" alt="instagram">
+          <img src="/image/inst.png" alt="instagram">
         </div>
       </div>
       <div class="footer__contacts">

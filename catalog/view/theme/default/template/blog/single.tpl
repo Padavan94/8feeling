@@ -66,7 +66,7 @@ $(document).ready(function() {
 
 
 
-<div id="blog-content" id="blog" style="display: none;">
+<div id="blog-content" id="blog">
 
   <?php if(count($breadcrumbs)) : ?>
   <div id="blog-breadcrumb">

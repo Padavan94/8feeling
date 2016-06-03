@@ -2,6 +2,7 @@
 
 <?php echo $header; ?>
 
+<?php if (($category_info['category_id'] !== "61")): ?>
 <div class="content">
   <div class="collections">
     <div class="collections__box">
@@ -17,11 +18,71 @@
       </div>
       <?php endforeach; ?>
     </div>
-
-   
   </div>
+</div> 
+<?php else: ?>
+
+<div class="content">
+  <section class="content__inner">
+    <div class="blog">
+      <div class="container">
+        <div class="blog__container">
+          <?php if(isset($posts) && $posts) : ?>
+            <?php foreach ($posts as $post) : ?>
+              <?php $day = date_parse($post['date_added']);
+               ?>
+          <article class="blog__item">
+            <div class="blog__item__img">
+              <a href="<?php echo HTTP_SERVER; ?>index.php?route=blog/single&amp;pid=<?php echo $post['ID']; ?>"><img src="<?php echo $post['post_thumbnail']; ?>" alt="img"></a>
+            </div>
+            <div class="blog__item__body">
+              <h4 class="blog__item__title"><?php echo ucfirst($post['title']); ?></h4>
+              <p class="blog__item__text">Led ut perspiciatis unde omnis iste natus error sit vouptatem accusantium doloremque laudantium, totam rem aperiam,</p>
+              <div class="blog__item__buttons">
+                <div class="blog__item__socials">
+                  <span>Поеделиться:</span>
+                  <a href="#"><i class="icon-vk"></i></a>
+                  <a href="#"><i class="icon-facebook"></i></a>
+                  <a href="#"><i class="icon-twitter"></i></a>
+                  <a href="#"><i class="icon-inst"></i></a>
+                  <a href="#"><i class="icon-youtube"></i></a>
+                </div>
+                <a href="<?php echo HTTP_SERVER; ?>index.php?route=blog/single&amp;pid=<?php echo $post['ID']; ?>" class="blog__item__more">Читать</a>
+              </div>
+            </div>
+            <div class="blog__item__date"><strong><?php echo $day['day']; ?><span><?php echo getMonthName($day['month']);?></span></strong></div>
+          </article>
+          <?php endforeach; ?>
+        <?php endif; ?>
+          
+        </div>
+
+        <nav class="pagination-wrapper">
+            <ul class="pagination">
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+      </div>
+    </div>
+  </section>
 
 </div>
+
+<?php endif; ?>
+
 
 
 
@@ -45,7 +106,6 @@
 <div id="blog-content" id="blog">
 
   <?php if(isset($category_info)) : ?>
-    
   <div id="page-heading">
     <div class="container">
       <div class="content">
@@ -144,6 +204,7 @@
                
                 <?php $time = strtotime($post['date_added']); ?>
                 <div class="datetime">
+                  <?php var_dump(date_parse($post['date_added'])); ?>
                   <span class="date"><?php echo date('d',$time); ?>, <?php echo month_name(date('m',$time)); ?>, <?php echo date('Y',$time); ?></span>
                   <span class="time"><?php echo date('h',$time); ?>:<?php echo date('i',$time); ?>:<?php echo date('s',$time); ?></span>
                 </div>

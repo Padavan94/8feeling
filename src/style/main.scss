@@ -475,7 +475,7 @@ body{
 }
 .pre-footer{
 	height: 400px;
-	background: url("/img/pre-bg.jpg");
+	background: url("/image/pre-bg.jpg");
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -524,7 +524,7 @@ body{
 			position: absolute;
 			width: 175px;
 			height: 225px;
-			background-image: url("/img/p-icons.png");
+			background-image: url("/image/p-icons.png");
 		}
 		&:after{
 			right: 15px;
@@ -556,7 +556,7 @@ body{
 				left: 0px;
 				bottom: 9px;
 				position: absolute;
-				background-image: url("/img/spider.png");
+				background-image: url("/image/spider.png");
 			}
 		}
 		&.isEmpty{
@@ -568,7 +568,7 @@ body{
 				left: 0px;
 				bottom: 2px;
 				position: absolute;
-				background-image: url("/img/angry.png");
+				background-image: url("/image/angry.png");
 			}
 		}
 	}
@@ -1288,7 +1288,7 @@ body{
 					top: 50%;
 					margin-top: -2px;
 					right: 10px;
-					background-image: url("/img/angle.png");
+					background-image: url("/image/angle.png");
 					background-repeat: no-repeat;
 				}
 				&:first-child{

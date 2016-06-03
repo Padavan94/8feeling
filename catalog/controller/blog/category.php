@@ -19,6 +19,52 @@ class ControllerBlogCategory extends Controller {
 			$this->document->addScript('catalog/view/theme/'.$this->config->get('config_template').'/js/blogScript.js');
 		}
 
+		function getMonthName($month_id){
+			$res = "asdasd";
+			switch ($month_id) {
+				case 1:
+					$res = "Янв";
+					break;
+				case 2:
+					$res = "Фев";
+					break;
+				case 3:
+					$res = "Март";
+					break;
+				case 4:
+					$res = "Апрель";
+					break;
+				case 5:
+					$res = "Май";
+					break;
+				case 6:
+					$res = "Июнь";
+					break;
+				case 7:
+					$res = "Июль";
+					break;
+				case 8:
+					$res = "Авг";
+					break;
+				case 9:
+					$res = "Сен";
+					break;
+				case 10:
+					$res = "Окт";
+					break;
+				case 11:
+					$res = "Нояб";
+					break;
+				case 12:
+					$res = "Дек";
+					break;
+				default:
+					$res = "";
+					break;
+			}
+			return $res;
+		}
+
 		$add_default_style = false;
 		if($blog_config['CSS_filename']) {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/stylesheet/'.$blog_config['CSS_filename'])) {
