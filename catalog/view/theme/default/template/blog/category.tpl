@@ -22,7 +22,7 @@
 </div> 
 <?php else: ?>
 
-<div class="content">
+<div class="content" style="">
   <section class="content__inner">
     <div class="blog">
       <div class="container">
@@ -84,6 +84,7 @@
 <?php endif; ?>
 
 
+<?php echo $footer; ?>
 
 
 
@@ -102,8 +103,7 @@
 
 
 
-
-<div id="blog-content" id="blog">
+<div id="blog-content" id="blog" style="display: none;">
 
   <?php if(isset($category_info)) : ?>
   <div id="page-heading">
@@ -294,4 +294,3 @@
     </div>
     <!-- #blog-bottomcontent -->
 
-<?php echo $footer; ?>
